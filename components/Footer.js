@@ -3,8 +3,8 @@ import React from 'react'
 const Footer = () => {
     return (
     <div>
-    <footer class="footer">
-    <div class="content has-text-centered">
+    <footer className="footer">
+    <div className="content has-text-centered">
       <p>
         <strong>Built By Karishma Shukla 🌻 </strong>
       </p>
