@@ -4,14 +4,15 @@ import ResourceHighlight from '../components/ResourceHighlight'
 import ResourceList from '../components/ResourceList'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
+import {resources} from '../api/data'
 
 export default function Home() {
   return (
     <>
      <Navbar />
-     <ResourceHighlight />
+     <ResourceHighlight resources={resources} />
      <Newsletter />
-     <ResourceList />
+     <ResourceList resources={resources}  />
      <Footer />
     </>
   );
