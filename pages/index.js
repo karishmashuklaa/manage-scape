@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <>
      <Navbar />
-     <ResourceHighlight resources={resources} />
+     <ResourceHighlight resources={resources.slice(0,2)} />
      <Newsletter />
-     <ResourceList resources={resources}  />
+     <ResourceList resources={resources.slice(2)}  />
      <Footer />
     </>
   );
