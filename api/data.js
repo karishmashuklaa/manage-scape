@@ -1,4 +1,4 @@
-const resources = [
+export const resources = [
     {
         id: '1',
         title: 'Learning Javascript',
@@ -7,7 +7,8 @@ const resources = [
         image: 'xyz',
         priority: 3,
         timeToFinish: 120,
-        active: true
+        active: true,
+        createdAt : 12
     },
     {
         id: '2',
@@ -17,7 +18,8 @@ const resources = [
         image: 'xyz',
         priority: 2,
         timeToFinish: 320,
-        active: false
+        active: false,
+        createdAt : 12
     },
     {
         id: '3',
@@ -27,9 +29,9 @@ const resources = [
         image: 'xyz',
         priority: 1,
         timeToFinish: 110,
-        active: false
+        active: false,
+        createdAt : 12
     }
 
 ]
 
-export default resources
