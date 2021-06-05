@@ -12,7 +12,7 @@ export default function Home() {
      <Navbar />
      <ResourceHighlight resources={resources} />
      <Newsletter />
-     <ResourceList />
+     <ResourceList resources={resources}  />
      <Footer />
     </>
   );
