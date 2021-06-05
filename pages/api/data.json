@@ -1,8 +1,8 @@
 [
     {
         "id": "1",
-        "title": "Learning Javascript",
-        "description": "Learn JS",
+        "title": "Learn Javascript",
+        "description": "JavaScript is the crown jewel when it comes to programming language popularity​. Learn it to master rich web development.",
         "link": "",
         "image": "xyz",
         "priority": 3,
@@ -14,7 +14,7 @@
     {
         "id": "2",
         "title": "Learn English",
-        "description": "English",
+        "description": "English is the most used and spoken language around the world.English is the language used in business, science, and technology. Learning English will increase your chances to get a job, participate in discussions, and improve your networking skills.",
         "link": "",
         "image": "xyz",
         "priority": 3,
@@ -25,8 +25,8 @@
     },
     {
         "id": "2",
-        "title": "Read some book",
-        "description": "Read",
+        "title": "Introduction to Figma",
+        "description": "Figma is one of the best design tools available right now. The tool itself is incredibly intuitive.",
         "link": "",
         "image": "xyz",
         "priority": 3,
