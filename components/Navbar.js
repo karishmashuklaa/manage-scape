@@ -1,20 +1,24 @@
-import React from 'react'
+import Link from 'next/link'
 
 const Navbar = () => {
     return (
         <div>
         <nav className="navbar">
         <div className="container">
+
           <div className="navbar-brand">
-            <a className="navbar-item" href="/">
+            <Link href="/">
+            <a className="navbar-item">
              Manage Scape
             </a>
+            </Link>
             <span className="navbar-burger burger" data-target="navbarMenu">
               <span></span>
               <span></span>
               <span></span>
             </span>
           </div>
+
           <div id="navbarMenu" className="navbar-menu">
             <div className="navbar-end">
               <div className=" navbar-item">
@@ -25,15 +29,25 @@ const Navbar = () => {
                   </span>
                 </div>
               </div>
-              <a className="navbar-item is-active is-size-5 has-text-weight-semibold">
+
+              <Link href="/resources/new">
+              <a className="navbar-item is-size-6 has-text-weight-semibold">
                 Home
               </a>
-              <a className="navbar-item is-size-5 has-text-weight-semibold">
+              </Link>
+
+              <Link href="/">
+              <a className="navbar-item is-size-6 has-text-weight-semibold">
                 Examples
               </a>
-              <a className="navbar-item is-size-5 has-text-weight-semibold">
+              </Link>
+
+              <Link href="/">
+              <a className="navbar-item is-size-6 has-text-weight-semibold">
                 Features
               </a>
+              </Link>
+
             </div>
           </div>
         </div>
