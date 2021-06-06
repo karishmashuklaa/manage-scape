@@ -1,18 +1,18 @@
-import styles from "../styles/Home.module.css";
-import Navbar from '../components/Navbar'
+import styles from "../styles/Home.module.css"
+import Layout from '../components/Layout'
 import ResourceHighlight from '../components/ResourceHighlight'
 import ResourceList from '../components/ResourceList'
 import Newsletter from '../components/Newsletter'
-import Footer from '../components/Footer'
+
 
 export default function Home({resources}) {
   return (
     <>
-     <Navbar />
+     <Layout>
      <ResourceHighlight resources={resources.slice(0,2)} />
      <Newsletter />
      <ResourceList resources={resources.slice(2)}  />
-     <Footer />
+     </Layout>
     </>
   );
 }
