@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Newsletter = () => {
     return (
@@ -16,7 +15,7 @@ const Newsletter = () => {
                       <input className="input " type="text" placeholder="Email address" />
                     </div>
                     <div className="control">
-                      <a className="button is-info">
+                      <a className="button is-dark">
                         Subscribe
                       </a>
                     </div>
