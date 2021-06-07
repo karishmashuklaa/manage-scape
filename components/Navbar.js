@@ -30,15 +30,15 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <Link href="/resources/new">
+              <Link href="/">
               <a className="navbar-item is-size-6 has-text-weight-semibold">
                 Home
               </a>
               </Link>
 
-              <Link href="/">
+              <Link href="/resources/new">
               <a className="navbar-item is-size-6 has-text-weight-semibold">
-                Examples
+                Add
               </a>
               </Link>
 
