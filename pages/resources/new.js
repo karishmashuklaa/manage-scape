@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import axios from 'axios'
 import Layout from '../../components/Layout'
 
 const CreateResource = () => {
@@ -21,8 +22,12 @@ const CreateResource = () => {
     }
 
     const submitForm = () => {
-        alert(JSON.stringify(form))
+       axios.post("/api/resources", form)
+       .then( res => alert(res?.data))
+       .catch( error => alert(error?.response?.data))
     }
+
+    // Use of ? - It helps to handle undefined values. It is optional to use.
 
     const resetForm = () => setForm(DEFAULT_DATA)
 
