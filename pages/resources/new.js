@@ -23,7 +23,11 @@ const CreateResource = () => {
 
     const submitForm = () => {
        axios.post("/api/resources", form)
+       .then( res => alert(res?.data))
+       .catch( error => alert(error?.response?.data))
     }
+
+    // Use of ? - It helps to handle undefined values. It is optional to use.
 
     const resetForm = () => setForm(DEFAULT_DATA)
 
