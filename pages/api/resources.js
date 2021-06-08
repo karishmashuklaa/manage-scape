@@ -12,9 +12,9 @@ export default async function (req,res) {
 
       if(!title || !description || !link || !timeToFinish){
 
-         return res.status(400).send('Some form fields are empty!')
+         return res.status(400).send('Please fill all form fields')
       }
-      return res.send('Data has been recieved successfully')
+      return res.send('Your response has been successfully recieved')
 
    }
 
