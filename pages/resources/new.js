@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import axios from 'axios'
 import Layout from '../../components/Layout'
 
 const CreateResource = () => {
@@ -21,7 +22,7 @@ const CreateResource = () => {
     }
 
     const submitForm = () => {
-        alert(JSON.stringify(form))
+       axios.post("/api/resources", form)
     }
 
     const resetForm = () => setForm(DEFAULT_DATA)
