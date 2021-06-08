@@ -15,11 +15,12 @@ export default async function (req,res) {
 
          return res.status(400).send('Please fill all form fields')
       }
-      axios.post('http://localhost:3001/api/resources', req.body)
 
-      return res.send('Your response has been recieved successfully')
-
+      try {
+         const axiosRes = await axios.post('http://localhost:3001/api/resources', req.body) 
+         return res.send(axiosRes.data) 
+      } catch (error) {
+         return res.status(400).send('Failed to store data')
+      }
    }
-
-
 }

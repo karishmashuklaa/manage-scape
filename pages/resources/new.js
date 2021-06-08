@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
+import { useRouter } from 'next/router'
 import axios from 'axios'
 import Layout from '../../components/Layout'
+
 
 const CreateResource = () => {
 
@@ -13,6 +15,7 @@ const CreateResource = () => {
     }
 
     const [form, setForm] = useState(DEFAULT_DATA)
+    const router = useRouter()
 
     const handleChange = (e) => {
         setForm({
@@ -23,7 +26,7 @@ const CreateResource = () => {
 
     const submitForm = () => {
        axios.post("/api/resources", form)
-       .then( res => alert(res?.data))
+       .then( _ => router.push("/") )
        .catch( error => alert(error?.response?.data))
     }
 
@@ -86,6 +89,7 @@ const CreateResource = () => {
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
+                        <option>4</option>
                       </select>
                     </div>
                   </div>
