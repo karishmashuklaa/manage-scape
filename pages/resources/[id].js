@@ -1,6 +1,13 @@
 import Layout from '../../components/Layout'
+import { useRouter } from 'next/router'
 
 const ResourceDetail = ({resource}) => {
+
+    const router = useRouter()
+    if (router.isFallback) {
+        return <div>Loading data...</div>
+    }
+
     return (
         <Layout>
         <section className="hero ">
@@ -23,12 +30,28 @@ const ResourceDetail = ({resource}) => {
             </section>
         </div>
         </div>
-    </section>
+        </section>
         </Layout>
     )
 }
 
-export async function getServerSideProps({params}) {
+export async function getStaticPaths() {
+
+    const dataRes = await fetch("http://localhost:3001/api/resources/")
+    const data = await dataRes.json()
+    const path = data.map(resource => {
+        return {
+            params: { id: resource.id}
+        }
+    })
+
+    return {
+        paths: path,
+        fallback: true
+    }
+}
+
+export async function getStaticProps({params}) {
  // destructed params from context
     const dataRes = await fetch(`http://localhost:3001/api/resources/${params.id}`)
     const data = await dataRes.json()
@@ -36,7 +59,8 @@ export async function getServerSideProps({params}) {
     return {
         props: {
             resource: data
-        }
+        },
+        revalidate: 1
     }
 }
 
