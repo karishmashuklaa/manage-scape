@@ -1,11 +1,17 @@
 import Layout from "../../../components/Layout"
 import ResourceForm from "../../../components/ResourceForm"
+import axios from "axios"
+import {useRouter} from "next/router"
 
 const EditResource = ({ resource }) => {
 
+    const router = useRouter()
     const updateResource = (formData) => {
-        alert(JSON.stringify(formData))
+       axios.patch("/api/resources", formData)
+       .then( _ => alert(JSON.stringify(formData)))
+       .catch( error => alert(error?.response?.data))
     }
+  
   return (
     <Layout>
       <div className="container">
