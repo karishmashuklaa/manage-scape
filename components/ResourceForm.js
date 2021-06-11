@@ -37,7 +37,7 @@ const ResourceForm = ({onFormSubmit, initialFormData}) => {
               name="title"
               className="input"
               type="text"
-              placeholder="Enter name of title" />
+              placeholder="Enter title of the resource" />
           </div>
         </div>
         <div className="field">
