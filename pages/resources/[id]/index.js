@@ -21,7 +21,7 @@ const ResourceDetail = ({resource}) => {
                     <p>{resource.description}</p>
                     <Link href={`/resources/${resource.id}/edit`}>
                         <a className="button is-warning">
-                            Edit
+                            Update
                         </a>
                     </Link>
                     </div>
