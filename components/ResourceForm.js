@@ -11,7 +11,7 @@ const DEFAULT_DATA = {
 const ResourceForm = ({onFormSubmit, initialFormData}) => {
   const [form, setForm] = useState(initialFormData || DEFAULT_DATA)
 
-  const resetForm = () => setForm(DEFAULT_DATA)
+  const resetForm = () => setForm(initialFormData || DEFAULT_DATA)
 
   const handleChange = (e) => {
     setForm({
