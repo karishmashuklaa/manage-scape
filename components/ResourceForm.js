@@ -4,8 +4,8 @@ const DEFAULT_DATA = {
   title: "",
   description: "",
   link: "",
-  priority: "2",
-  timeToFinish: 60
+  priority: "1",
+  timeToFinish: 30
 }
 
 const ResourceForm = ({onFormSubmit}) => {
@@ -37,7 +37,7 @@ const ResourceForm = ({onFormSubmit}) => {
               name="title"
               className="input"
               type="text"
-              placeholder="Learn Next JS and Sanity IO" />
+              placeholder="Enter name of title" />
           </div>
         </div>
         <div className="field">
@@ -48,7 +48,7 @@ const ResourceForm = ({onFormSubmit}) => {
               name="description"
               onChange={handleChange}
               className="textarea"
-              placeholder="Learn these technologies because they are very popular and enable better SEO"></textarea>
+              placeholder="Enter some more information about the resource"></textarea>
           </div>
         </div>
         <div className="field">
@@ -60,7 +60,7 @@ const ResourceForm = ({onFormSubmit}) => {
               name="link"
               className="input"
               type="text"
-              placeholder="https://academy.eincode.com" />
+              placeholder="Eg: https://www.udacity.com/" />
           </div>
         </div>
         <div className="field">
@@ -75,6 +75,7 @@ const ResourceForm = ({onFormSubmit}) => {
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
+                <option>4</option>
               </select>
             </div>
           </div>
@@ -88,7 +89,7 @@ const ResourceForm = ({onFormSubmit}) => {
               name="timeToFinish"
               className="input"
               type="number"
-              placeholder="60" />
+              placeholder="30" />
           </div>
           <p className="help">Time is in minutes</p>
         </div>
@@ -103,7 +104,7 @@ const ResourceForm = ({onFormSubmit}) => {
             <button
               onClick={resetForm}
               type="button"
-              className="button is-link is-light">Reset Form</button>
+              className="button is-link is-light">Cancel</button>
           </div>
         </div>
       </form>
