@@ -8,8 +8,8 @@ const DEFAULT_DATA = {
   timeToFinish: 30
 }
 
-const ResourceForm = ({onFormSubmit}) => {
-  const [form, setForm] = useState(DEFAULT_DATA);
+const ResourceForm = ({onFormSubmit, initialFormData}) => {
+  const [form, setForm] = useState(initialFormData || DEFAULT_DATA)
 
   const resetForm = () => setForm(DEFAULT_DATA)
 
@@ -21,7 +21,7 @@ const ResourceForm = ({onFormSubmit}) => {
   }
 
   const submitForm = () => {
-    onFormSubmit(form);
+    onFormSubmit(form)
   }
 
   return (
