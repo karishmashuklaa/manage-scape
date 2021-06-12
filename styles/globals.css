@@ -28,10 +28,11 @@ a {
 }
 
 .active-resource .resource-name {
-  font-size: 30px;
+  font-size: 38px;
 }
 
 .active-resource .elapsed-time {
-  font-size: 64px;
+  font-size: 50px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
