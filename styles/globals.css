@@ -18,3 +18,19 @@ a {
 .resource-form {
   margin: 100px 50px 100px 50px;
 }
+
+.active-resource {
+  background-color: #7a31aa;
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.active-resource .resource-name {
+  font-size: 30px;
+}
+
+.active-resource .elapsed-time {
+  font-size: 64px;
+  font-weight: bold;
+}
