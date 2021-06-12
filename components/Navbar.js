@@ -3,7 +3,7 @@ import Link from 'next/link'
 const Navbar = () => {
     return (
         <div>
-        <nav className="navbar">
+        <nav className="navbar is-fixed-top">
         <div className="container">
 
           <div className="navbar-brand">
