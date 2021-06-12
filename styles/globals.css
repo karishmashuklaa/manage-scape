@@ -21,6 +21,7 @@ a {
 
 .active-resource {
   background-color: #7a31aa;
+  margin-top: 40px;
   padding: 50px;
   text-align: center;
   color: white;
