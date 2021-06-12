@@ -8,7 +8,7 @@ const EditResource = ({ resource }) => {
     const router = useRouter()
     const updateResource = (formData) => {
        axios.patch("/api/resources", formData)
-       .then( _ => alert(JSON.stringify(formData)))
+       .then( _ => alert("Resource has been updated"))
        .catch( error => alert(error?.response?.data))
     }
   
