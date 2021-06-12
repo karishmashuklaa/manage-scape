@@ -17,10 +17,10 @@ const ActiveResource = () => {
 
   return (
     <div className="active-resource">
-      <h1 className="resource-name">Active Resource</h1>
+      <h1 className="resource-name">Active Resource: {resource.title}</h1>
       <div className="time-wrapper">
         <h2 className="elapsed-time">
-          1400
+          {resource.timeToFinish} mins
         </h2>
       </div>
       <Link href="/">
