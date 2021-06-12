@@ -10,7 +10,7 @@ const ResourceList = ({resources}) => {
           <h1 className="title has-text-black is-3">{resource.title}</h1>
           <p className="has-text-dark">{resource.description}</p>
           <Link href={`/resources/${resource.id}`}>
-            <a className="button is-success">
+            <a className="button is-info">
               Details
             </a>
           </Link>

@@ -98,13 +98,13 @@ const ResourceForm = ({onFormSubmit, initialFormData}) => {
             <button
               type="button"
               onClick={submitForm}
-              className="button is-link">Submit</button>
+              className="button is-dark">Submit</button>
           </div>
           <div className="control">
             <button
               onClick={resetForm}
               type="button"
-              className="button is-link is-light">Cancel</button>
+              className="button is-light">Cancel</button>
           </div>
         </div>
       </form>

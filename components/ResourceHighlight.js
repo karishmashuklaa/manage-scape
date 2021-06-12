@@ -20,7 +20,7 @@ const ResourceHighlight = ({resources}) => {
                   <h1 className="title"> {resource.title}</h1>
                   <p>{resource.description}</p>
                   <Link href={`/resources/${resource.id}`}>
-                    <a className="button is-success">
+                    <a className="button is-info">
                       Details
                     </a>
                   </Link>
