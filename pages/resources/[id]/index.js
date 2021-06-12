@@ -1,11 +1,18 @@
 import Layout from '../../../components/Layout'
 import Link from 'next/link'
+import axios from "axios"
 
 const ResourceDetail = ({resource}) => {
 
+    const activateResource = () => {
+        axios.patch("/api/resources", {...resource, status: "active"})
+        .then(_ => alert("Resource is activated"))
+        .catch(_ => alert("Failed to activate the resource"))
+    }
+
     return (
         <Layout>
-        <section className="hero ">
+        <section className="hero">
         <div className="hero-body">
         <div className="container">
             <div className="columns">
@@ -24,6 +31,11 @@ const ResourceDetail = ({resource}) => {
                             Update
                         </a>
                     </Link>
+                    <button 
+                    onClick={activateResource}
+                    className="button is-success ml-3">
+                        Activate
+                    </button>
                     </div>
                 </div>
                 </div>
