@@ -1,6 +1,19 @@
+import {useState, useEffect} from "react"
 import Link from "next/link"
+import axios from "axios"
 
 const ActiveResource = () => {
+
+  const [resource,setResource] = useState({})
+  
+  useEffect(() => {
+    async function fetchResource(){
+      const axiosRes = await axios.get("/api/activeresource")
+      const resource = axiosRes.data 
+      setResource(resource)
+    }
+    fetchResource()
+  }, [])
 
   return (
     <div className="active-resource">
