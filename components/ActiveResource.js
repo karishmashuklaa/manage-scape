@@ -58,10 +58,8 @@ const ActiveResource = () => {
       <h1 className="resource-name">
         No Active Resource
         <br />
-        <em className="title">Your active resource will be displayed here</em>
       </h1>
       }
-
       <div className="time-wrapper">
           {isActiveResource && 
           (secondsLeft > 0 ? 

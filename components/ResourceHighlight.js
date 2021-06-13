@@ -1,5 +1,6 @@
 import ResourceTag from './ResourceTag'
 import Link from 'next/link'
+import moment from 'moment'
 
 const ResourceHighlight = ({resources}) => {
     return (
@@ -18,7 +19,7 @@ const ResourceHighlight = ({resources}) => {
               <div className="column is-8 is-offset-2">
                 <div className="content is-medium">
                   <h2 className="subtitle is-4">
-                    {resource.createdAt}
+                    {moment(resource.createdAt).format("LL")}
                     <ResourceTag status={resource.status} />
                   </h2>
                   <h1 className="title"> {resource.title}</h1>

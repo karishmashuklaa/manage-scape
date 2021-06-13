@@ -15,6 +15,7 @@ const Navbar = () => {
             <span className="navbar-burger burger" data-target="navbarMenu">
               <span></span>
               <span></span>
+              <span></span>
             </span>
           </div>
 
