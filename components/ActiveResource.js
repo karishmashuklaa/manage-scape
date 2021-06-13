@@ -49,6 +49,8 @@ const ActiveResource = () => {
       </h1> :
       <h1 className="resource-name">
         No Active Resource
+        <br />
+        <em className="title">Your active resource will be displayed here</em>
       </h1>
       }
 
@@ -56,7 +58,7 @@ const ActiveResource = () => {
           {isActiveResource && 
           (secondsLeft > 0 ? 
             <h2 className="elapsed-time">
-              {secondsLeft}
+              {secondsLeft} secs left
             </h2> :
             <h2 className="elapsed-time">
               <button className="button is-success">
