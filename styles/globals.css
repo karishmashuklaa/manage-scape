@@ -48,3 +48,15 @@ a {
 .active-resource .time-wrapper {
   height: 100px;
 }
+
+.tag.resource-complete{
+  background: #2bce2b;
+}
+
+.tag.resource-active{
+  background: #d4d444;
+}
+
+.tag.resource-inactive{
+  background: #bdbbbb;
+}
