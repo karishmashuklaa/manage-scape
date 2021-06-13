@@ -2,6 +2,7 @@ import Layout from '../../../components/Layout'
 import ResourceTag from '../../../components/ResourceTag'
 import Link from 'next/link'
 import axios from "axios"
+import moment from "moment"
 
 const ResourceDetail = ({resource}) => {
 
@@ -25,22 +26,27 @@ const ResourceDetail = ({resource}) => {
                 <div className="column is-8 is-offset-2">
                     <div className="content is-medium">
                     <h2 className="subtitle is-4">
-                        {resource.createdAt}
+                        {moment(resource.createdAt).format("LL")}
                         <ResourceTag status={resource.status} />
                     </h2>
                     <h1 className="title">{resource.title}</h1>
                     <p>{resource.description}</p>
                     <p>Time to finish: {resource.timeToFinish} mins</p>
-                    <Link href={`/resources/${resource.id}/edit`}>
-                        <a className="button is-warning">
-                            Update
-                        </a>
-                    </Link>
-                    <button 
-                    onClick={activateResource}
-                    className="button is-success ml-3">
-                        Activate
-                    </button>
+                    { resource.status === "inactive" &&
+                        <>
+                        <Link href={`/resources/${resource.id}/edit`}>
+                            <a className="button is-warning">
+                                Update
+                            </a>
+                        </Link>
+
+                        <button 
+                        onClick={activateResource}
+                        className="button is-success ml-3">
+                            Activate
+                        </button>
+                        </>
+                    }
                     </div>
                 </div>
                 </div>
