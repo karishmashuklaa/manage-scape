@@ -19,11 +19,6 @@ a {
   margin: 100px 50px 100px 50px;
 }
 
-.active-resource .title {
-  font-size: large;
-  color: white;
-}
-
 .active-resource {
   background-color: #7a31aa;
   margin-top: 40px;
@@ -35,7 +30,7 @@ a {
 
 .active-resource .resource-name {
   font-size: 38px;
-  height: 50px;
+  height: 30px;
   margin-bottom: 20px;
 }
 
@@ -47,4 +42,16 @@ a {
 
 .active-resource .time-wrapper {
   height: 100px;
+}
+
+.tag.resource-complete{
+  background: #2bce2b;
+}
+
+.tag.resource-active{
+  background: #d4d444;
+}
+
+.tag.resource-inactive{
+  background: #bdbbbb;
 }

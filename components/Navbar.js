@@ -38,13 +38,7 @@ const Navbar = () => {
 
               <Link href="/resources/new">
               <a className="navbar-item is-size-6 has-text-weight-semibold">
-                Add
-              </a>
-              </Link>
-
-              <Link href="/">
-              <a className="navbar-item is-size-6 has-text-weight-semibold">
-                Features
+                Add Resource
               </a>
               </Link>
 
