@@ -8,16 +8,17 @@ const ActiveResource = () => {
   const [resource,setResource] = useState({})
   const [secondsLeft, setSecondsLeft] = useState()
   
+  // activation of resource
   useEffect(() => {
     async function fetchResource(){
       const axiosRes = await axios.get("/api/activeresource")
-      const resource = axiosRes.data 
+      const resource = axiosRes.data
       const timeToFinish = parseInt(resource.timeToFinish, 10) // this will be in minutes
       const elapsedTime = moment().diff(moment(resource.activationTime), "seconds") // difference between current time and activation time
       const updatedTimeToFinish = (timeToFinish * 60) - elapsedTime // this will be in seconds
       
-      if(updatedTimeToFinish >=0) {
-        resource.timeToFinish = updatedTimeToFinish
+      if (updatedTimeToFinish >= 0) {
+        // resource.timeToFinish = updatedTimeToFinish
         setSecondsLeft(updatedTimeToFinish)
       }
 
@@ -26,6 +27,7 @@ const ActiveResource = () => {
     fetchResource()
   }, [])
 
+  // handling active resource time left
   useEffect(() => {
     const interval = setInterval(() => {
       setSecondsLeft(secondsLeft - 1)
@@ -39,6 +41,12 @@ const ActiveResource = () => {
 
   }, [secondsLeft])
 
+  // complete resource 
+  const completeResource = () => {
+    axios.patch("/api/resources", {...resource, status: "complete"})
+    .then(_ => location.reload())
+    .catch(_ => alert("Cannot complete resource"))
+  }
   const isActiveResource = resource && resource.id
 
   return (
@@ -61,14 +69,15 @@ const ActiveResource = () => {
               {secondsLeft} secs left
             </h2> :
             <h2 className="elapsed-time">
-              <button className="button is-success">
+              <button onClick={completeResource}
+              className="button is-success">
                 Click and Done!
               </button>
             </h2>
               )}
       </div>
       {isActiveResource ?
-        <Link href="/">
+        <Link href={`/resources/${resource.id}`}>
         <a className="button">
           Go to resource
         </a>
