@@ -12,13 +12,13 @@ const ActiveResource = () => {
   useEffect(() => {
     async function fetchResource(){
       const axiosRes = await axios.get("/api/activeresource")
-      const resource = axiosRes.data 
+      const resource = axiosRes.data
       const timeToFinish = parseInt(resource.timeToFinish, 10) // this will be in minutes
       const elapsedTime = moment().diff(moment(resource.activationTime), "seconds") // difference between current time and activation time
       const updatedTimeToFinish = (timeToFinish * 60) - elapsedTime // this will be in seconds
       
-      if(updatedTimeToFinish >= 0) {
-        resource.timeToFinish = updatedTimeToFinish
+      if (updatedTimeToFinish >= 0) {
+        // resource.timeToFinish = updatedTimeToFinish
         setSecondsLeft(updatedTimeToFinish)
       }
 
