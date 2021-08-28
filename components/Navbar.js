@@ -23,7 +23,6 @@ const Navbar = () => {
             <div className="navbar-end">
               <div className=" navbar-item">
                 <div className="control has-icons-left">
-                  <input className="input is-rounded" type="email" placeholder="Search" />
                   <span className="icon is-left">
                     <i className="fa fa-search"></i>
                   </span>
