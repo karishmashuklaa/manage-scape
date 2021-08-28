@@ -1,7 +1,7 @@
 ## Description
 A basic resource management application using Next.js and Bulma. 
 
-Add resources, activate them and finish them within the time limit.
+Add, activate and complete the resources within the time limit.
 
 The resources can have three statuses:
 * active - The current running resource
